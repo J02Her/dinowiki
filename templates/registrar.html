@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %}Registrar Dinosaurio{% endblock %}
+
+{% block contenido %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <h2 class="fw-bold mb-4">➕ Registrar Nuevo Dinosaurio</h2>
+
+        <form method="POST" action="{{ url_for('registrar') }}" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Stegosaurus" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="periodo" class="form-label">Período Geológico</label>
+                <select class="form-select" id="periodo" name="periodo" required>
+                    <option value="" selected disabled>Selecciona un período</option>
+                    <option value="Triásico">Triásico</option>
+                    <option value="Jurásico">Jurásico</option>
+                    <option value="Cretácico">Cretácico</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="alimentacion" class="form-label">Tipo de Alimentación</label>
+                <select class="form-select" id="alimentacion" name="alimentacion" required>
+                    <option value="" selected disabled>Selecciona un tipo</option>
+                    <option value="Carnívoro">Carnívoro</option>
+                    <option value="Herbívoro">Herbívoro</option>
+                    <option value="Omnívoro">Omnívoro</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tamano" class="form-label">Tamaño Aproximado</label>
+                <input type="text" class="form-control" id="tamano" name="tamano" placeholder="Ej. 9 metros de largo" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción / Curiosidades</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Escribe un dato interesante..." required></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('catalogo') }}" class="btn btn-outline-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-success">Guardar Dinosaurio</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

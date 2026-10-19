@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block titulo %}Editar Dinosaurio{% endblock %}
+
+{% block contenido %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <h2 class="fw-bold mb-4">✏️ Editar Dinosaurio</h2>
+
+        <form method="POST" action="{{ url_for('editar', id_dinosaurio=dinosaurio.id) }}" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ dinosaurio.nombre }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="periodo" class="form-label">Período Geológico</label>
+                <select class="form-select" id="periodo" name="periodo" required>
+                    <option value="Triásico" {% if dinosaurio.periodo == "Triásico" %}selected{% endif %}>Triásico</option>
+                    <option value="Jurásico" {% if dinosaurio.periodo == "Jurásico" %}selected{% endif %}>Jurásico</option>
+                    <option value="Cretácico" {% if dinosaurio.periodo == "Cretácico" %}selected{% endif %}>Cretácico</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="alimentacion" class="form-label">Tipo de Alimentación</label>
+                <select class="form-select" id="alimentacion" name="alimentacion" required>
+                    <option value="Carnívoro" {% if dinosaurio.alimentacion == "Carnívoro" %}selected{% endif %}>Carnívoro</option>
+                    <option value="Herbívoro" {% if dinosaurio.alimentacion == "Herbívoro" %}selected{% endif %}>Herbívoro</option>
+                    <option value="Omnívoro" {% if dinosaurio.alimentacion == "Omnívoro" %}selected{% endif %}>Omnívoro</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tamano" class="form-label">Tamaño Aproximado</label>
+                <input type="text" class="form-control" id="tamano" name="tamano" value="{{ dinosaurio.tamano }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción / Curiosidades</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required>{{ dinosaurio.descripcion }}</textarea>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('catalogo') }}" class="btn btn-outline-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Actualizar Dinosaurio</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

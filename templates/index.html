@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<div class="p-5 mb-4 rounded-4 dino-hero text-center">
+    <h1 class="display-4 fw-bold">🦖 Bienvenido a DinoWiki</h1>
+    <p class="lead">Una mini enciclopedia web para explorar, registrar y administrar información sobre dinosaurios.</p>
+    <a href="{{ url_for('catalogo') }}" class="btn btn-lg btn-success me-2">Ver Catálogo</a>
+    <a href="{{ url_for('registrar') }}" class="btn btn-lg btn-outline-light">Registrar Dinosaurio</a>
+</div>
+
+<div class="row text-center g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📖 Consulta</h5>
+                <p class="card-text">Explora el catálogo completo con la información de cada especie registrada.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">➕ Registra</h5>
+                <p class="card-text">Agrega nuevas especies de dinosaurios con su período, alimentación y tamaño.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">✏️ Administra</h5>
+                <p class="card-text">Edita o elimina cualquier registro existente de forma sencilla.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="text-center text-muted mt-4">Actualmente hay <strong>{{ total }}</strong> dinosaurio(s) registrados en DinoWiki.</p>
+{% endblock %}

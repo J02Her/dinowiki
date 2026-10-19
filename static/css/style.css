@@ -1,0 +1,25 @@
+body {
+    background-color: #f6f5f0;
+}
+
+.dino-navbar {
+    background: linear-gradient(90deg, #2e7d32, #1b5e20);
+}
+
+.dino-hero {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: #ffffff;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #ffffff;
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tyrannosaurus Rex",
+    "periodo": "Cretacico",
+    "alimentacion": "Carnivoro",
+    "tamano": "12 metros de largo",
+    "descripcion": "Uno de los depredadores terrestres mas grandes conocidos, con una mordida extremadamente poderosa."
+  },
+  {
+    "id": 2,
+    "nombre": "Triceratops",
+    "periodo": "Cretacico",
+    "alimentacion": "Herbivoro",
+    "tamano": "9 metros de largo",
+    "descripcion": "Reconocible por sus tres cuernos faciales y el gran escudo o en su cuello."
+  },
+  {
+    "id": 3,
+    "nombre": "Brachiosaurus",
+    "periodo": "Jurasico",
+    "alimentacion": "Herbivoro",
+    "tamano": "25 metros de largo",
+    "descripcion": "Uno de los dinosaurios mas altos, con patas delanteras mas largas que las traseras."
+  },
+  {
+    "id": 4,
+    "nombre": "Velociraptor",
+    "periodo": "Cretacico",
+    "alimentacion": "Carnivoro",
+    "tamano": "2 metros de largo",
+    "descripcion": "Pequeño y agil depredador, probablemente cubierto de plumas y muy inteligente para su época."
+  }
+]
